@@ -14,11 +14,11 @@ function main(){
     else alert("You had " +score+ " errors");
 }
 function askFive(){
-    let score = 0;
+    let wrong = 0;
     for (let question = 1; question <= 5; question++){
-        score += askQuestion(question);
+        wrong += askQuestion(question);
     }
-    return score;
+    return wrong;
 }
 /* STAGE 1:ASK A QUESTION */
 
