@@ -3,22 +3,22 @@
  * is being asked, and counting the number of equations with at least one error.
  * FLOWCHART: https://lucid.app/lucidchart/5a3164fd-459f-494d-9cae-b4a6be593b13/view
  */
-main();
 /* Setup */
 // Define a function called main and then call it up top.
 // Define a function called askFive and call it from inside main().
 // Define a function called askQuestion and call it from inside askFive() as askQuestion(1);
+main();
 function main(){
-askFive();
+    let score = askFive();
+    if (score == 0) alert("Perfect!");
+    else alert("You had " +score+ " errors");
 }
 function askFive(){
-askQuestion(1);
-}
-function askQuestion(){
-    alert("+")
-    let a = Math.floor(Math.random()*7)+3;
-    let b = Math.floor(Math.random()*7)+3;
-    let product = 
+    let score = 0;
+    for (let question = 1; question <= 5; question++){
+        score += askQuestion(question);
+    }
+    return score;
 }
 /* STAGE 1:ASK A QUESTION */
 
@@ -26,13 +26,30 @@ function askQuestion(){
  * @param: question (integer 1-5)
  * @return: integer (0 or 1)
  */
-// Create a variable named a, and set to a random integer between 3 and 9.
-// Create a variable named b, and set to a random integer between 3 and 9.
-// Create a variable called product, set as a * b. 
-// Create a variable called equation, set as the complex string a * b = ?.
-// Create a variable called answer, ask user for it by prompting with equation.
-// Display "Correct!" and return 0 if the answer and product match.
-// Otherwise, display "Incorrect!" and return 1.
+function askQuestion(question){
+
+    // Create a variable named a, and set to a random integer between 3 and 9.
+    let a = Math.floor(Math.random()*7)+3;
+    let b = Math.floor(Math.random()*7)+3;
+    let product = (a*b); 
+    let equation = (a + " * " + b + " = ? ");
+    let answer = prompt(equation);
+    if (answer == "q"){
+        alert("Quitter!");
+        return 2;
+    }
+    else if(answer == product){
+        alert("Correct!");
+        return 0;
+    }
+    else {
+        alert("Incorrect!");
+        return 1;
+    }
+}
+    // Otherwise, display "Incorrect!" and return 1.
+
+
 
 /* TEST BEFORE CONTINUING TO STAGE TWO! */
 
@@ -42,11 +59,7 @@ function askQuestion(){
  * @param: none
  * @return: score (0-5)
  */
-// Create a variable score, set to 0
-// Write a for loop with question as the index, values 1 to 5
-// Call askQuestion in the loop, with question as argument
-// Add the returned value of askQuestion to score each time you call it (same line)
-// return score after loop finishes
+
 
 /* TEST BEFORE CONTINUING TO STAGE THREE! */
 
