@@ -9,6 +9,16 @@
 // Define a function called askFive and call it from inside main().
 // Define a function called askQuestion and call it from inside askFive() as askQuestion(1);
 
+/* main controls the program. Calling askFive() it provides feedback depending on the 
+ * number wrong returned: 0 = "Perfect!" otherwise it says how many wrong. 
+ * @param none
+ * @return none
+ */
+// Call askFive() and store the returned value in 'wrong'
+// If wrong = 0 alert "Perfect"
+// Otherwise alert "You got [wrong] wrong."
+
+
 /* STAGE 1:ASK A QUESTION */
 
 /* askQuestion asks a multiplication question, returns 1 if incorrect
