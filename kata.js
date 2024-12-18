@@ -23,26 +23,14 @@
 // Display "Correct!" and return 0 if the answer and product match.
 // Otherwise, display "Incorrect!" and return 1.
 
-/* TEST BEFORE CONTINUING TO STAGE TWO! */
-
 /* STAGE 1:ASK 5 QUESTIONS */
 
 /* askFive calls askQuestion five times, counting and returning number wrong
  * @param: none
- * @return: score (0-5)
+ * @return: wrong (0-5)
  */
-// Create a variable score, set to 0
+// Create a variable wrong, set to 0
 // Write a for loop with question as the index, values 1 to 5
 // Call askQuestion in the loop, with question as argument
-// Add the returned value of askQuestion to score each time you call it (same line)
-// return score after loop finishes
-
-/* TEST BEFORE CONTINUING TO STAGE THREE! */
-
-/* STAGE 3: MULTIPLE TRIES (CHALLENGE!) */
-
-/* Refactor askQuestion per whileQuestions askFive calls askQuestion five times, counting and returning number wrong
- * Use the whileQuestions tab in the flowchart to guide you. 
- * @param: none
- * @return: score (0-5)
- */
+// Add the returned value of askQuestion to wrong each time you call it (same line)
+// return wrong after loop finishes
